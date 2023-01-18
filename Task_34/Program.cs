@@ -22,19 +22,19 @@ void ShowArray(int[] array)
 
 Console.WriteLine($"Введите размер массива ");
 int arraySize = int.Parse(Console.ReadLine());
-if (arraySize < 1) 
+if (arraySize < 1)
 {
     Console.WriteLine($"Размер массива должен быть больше 0");
 }
 else
 {
-int [] myArray = CreateRandomArray (arraySize, 100, 1000);
-ShowArray(myArray);
-int count = 0;
-for (int i = 0; i < myArray.Length; i++)
-{
-    if (myArray[i] % 2 == 0) count++;
-}
+    int[] myArray = CreateRandomArray(arraySize, 100, 1000);
+    ShowArray(myArray);
+    int count = 0;
+    for (int i = 0; i < myArray.Length; i++)
+    {
+        if (myArray[i] % 2 == 0) count++;
+    }
 
-Console.WriteLine($"В данном массиве {count} четных чисел");
+    Console.WriteLine($"В данном массиве {count} четных чисел");
 }
