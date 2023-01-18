@@ -35,9 +35,9 @@ else
     int sumOdd = 0;
     for (int i = 0; i < myArray.Length; i++)
     {
-        if (i % 2 == 0) sumEven = myArray[i] + sumEven;
-        else sumOdd = myArray[i] + sumOdd;         
+        if (i % 2 == 0) sumEven += myArray[i];
+        else sumOdd += myArray[i];
     }
-Console.WriteLine($"Сумма четных элементов массива равна {sumEven}");
-Console.WriteLine($"А сумма НЕ четных элементов массива равна {sumOdd}");
+    Console.WriteLine($"Сумма четных элементов массива равна {sumEven}");
+    Console.WriteLine($"А сумма НЕ четных элементов массива равна {sumOdd}");
 }
