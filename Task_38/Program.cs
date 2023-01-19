@@ -15,7 +15,7 @@ void ShowArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"| {array[i]} |");
+        Console.Write($"| {array[i]:F2} |");
     }
     Console.WriteLine();
 }
@@ -47,5 +47,5 @@ else
             if (myArray[i] < minElement) minElement = myArray[i];
         }
     }
-    Console.WriteLine($"Разница между максимаьным элементом {maxElement} и минимальным элементом {minElement} будет равна {maxElement - minElement}");
+    Console.WriteLine($"Разница между максимаьным элементом {maxElement:F2} и минимальным элементом {minElement:F2} будет равна {maxElement - minElement}");
 }
