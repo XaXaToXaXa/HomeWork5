@@ -7,7 +7,7 @@ double[] CreateRandomArray(int size, double start, double end)
     Random rand = new Random();
     for (int i = 0; i < size; i++)
     {
-        RandomArray[i] =  rand.NextDouble() * (end-start) + start;
+        RandomArray[i] = rand.NextDouble() * (end - start) + start;
     }
     return RandomArray;
 }
@@ -31,12 +31,8 @@ else
     double[] myArray = CreateRandomArray(arraySize, -100.0, 100.0);
     ShowArray(myArray);
     Console.WriteLine();
-    //Вариант со встроеной функцией
-    // double maxElement = myArray.Max<double>();
-    // double minElement = myArray.Min<double>();
-    // Console.WriteLine($"Разница между максимаьным элементом {maxElement} и минимальным элементом {minElement} будет равна {maxElement - minElement}");
-    
-    //Вариант с циклом
+
+    Вариант с циклом
     double maxElement = myArray[0];
     double minElement = myArray[0];
     for (int i = 1; i < myArray.Length; i++)
