@@ -1,16 +1,17 @@
 ﻿// Задайте массив вещественных чисел. 
 // Найдите разницу между максимальным и минимальным элементов массива.
 // 3 7 22 2 78] -> 76
-int[] CreateRandomArray(int size, int start, int end)
+double[] CreateRandomArray(int size, double start, double end)
 {
-    int[] RandomArray = new int[size];
+    double[] RandomArray = new double[size];
+    Random rand = new Random();
     for (int i = 0; i < size; i++)
     {
-        RandomArray[i] = new Random().Next(start, end + 1);
+        RandomArray[i] =  rand.NextDouble() * (end-start) + start;
     }
     return RandomArray;
 }
-void ShowArray(int[] array)
+void ShowArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -27,17 +28,17 @@ if (arraySize < 1)
 }
 else
 {
-    int[] myArray = CreateRandomArray(arraySize, 0, 100);
+    double[] myArray = CreateRandomArray(arraySize, -100.0, 100.0);
     ShowArray(myArray);
     Console.WriteLine();
     //Вариант со встроеной функцией
-    // int maxElement = myArray.Max<int>();
-    // int minElement = myArray.Min<int>();
+    // double maxElement = myArray.Max<double>();
+    // double minElement = myArray.Min<double>();
     // Console.WriteLine($"Разница между максимаьным элементом {maxElement} и минимальным элементом {minElement} будет равна {maxElement - minElement}");
     
     //Вариант с циклом
-    int maxElement = myArray[0];
-    int minElement = myArray[0];
+    double maxElement = myArray[0];
+    double minElement = myArray[0];
     for (int i = 1; i < myArray.Length; i++)
     {
         if (myArray[i] > maxElement) maxElement = myArray[i];
