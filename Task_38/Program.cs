@@ -28,11 +28,11 @@ if (arraySize < 1)
 }
 else
 {
-    double[] myArray = CreateRandomArray(arraySize, -100.0, 100.0);
+    double[] myArray = CreateRandomArray(arraySize, 0.0, 100.0);
     ShowArray(myArray);
     Console.WriteLine();
 
-    Вариант с циклом
+    // Вариант с циклом
     double maxElement = myArray[0];
     double minElement = myArray[0];
     for (int i = 1; i < myArray.Length; i++)
